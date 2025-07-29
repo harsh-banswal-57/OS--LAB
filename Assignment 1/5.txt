@@ -1,0 +1,60 @@
+Simple Calculator Explanation
+
+Overview
+This program is a very basic calculator. It can:
+1. Add two numbers
+2. Subtract one number from another
+3. Multiply two numbers
+4. Divide one number by another
+5. Raise a number to a power
+6. Find the square root of a number
+
+How It Works
+
+1. Start
+   - The program asks you for two numbers.
+   - You type in each number and press Enter.
+
+2. Choose an Operation
+   - The program shows a menu:
+     1: Addition
+     2: Subtraction
+     3: Multiplication
+     4: Division
+     5: Exponentiation (power)
+     6: Square Root (uses only the first number)
+   - You type the number of the operation and press Enter.
+
+3. Do the Math
+   - The program calls the matching function to do the math.
+   - It prints “Answer is: X” where X is the result.
+
+4. Continue or Exit
+   - After showing the result, it asks:
+     1: Continue
+     2: Close
+   - Type 1 to do another calculation or 2 to end the program.
+
+Key Parts of the Code
+
+1. enum Actions
+   - Gives names to the numbers 1–6 (Add, Subtract, etc.)
+
+2. struct DoMath
+   - Addition: adds two numbers
+   - Subtraction: subtracts the second number from the first
+   - Multiplication: multiplies the two numbers
+   - Division: divides the first number by the second
+   - Exponentiation: raises the first number to the power of the second
+   - GetSquareRoot: finds the square root of the first number (supports negative with complex numbers)
+
+3. getNumber(prompt)
+   - Shows a prompt message
+   - Reads an integer from the user
+   - Keeps asking until the user types a valid number
+
+4. main()
+   - Loops forever until you choose to close
+   - Uses getNumber to get inputs and choice
+   - Uses switch on the choice to call DoMath functions
+   - Asks whether to continue or stop
